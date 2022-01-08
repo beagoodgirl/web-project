@@ -18,18 +18,18 @@ def welcome(request):
 '''
 if POST
     if applied person
-       f = form(POST, applied person)   # update
-       save if valid; show fail if invalid
+        f = form(POST, applied person)   # update
+        save if valid; show fail if invalid
     else                                # create new
-       f = form(POST)
-       save if valid; show fail if invalid
+        f = form(POST)
+        save if valid; show fail if invalid
 else (GET)
     if applied person
-       f = form(applied person)
-       go to apply
+        f = form(applied person)
+        go to apply
     else
-       f = new form
-       go to apply
+        f = new form
+        go to apply
 '''
 @login_required
 def apply(request):
