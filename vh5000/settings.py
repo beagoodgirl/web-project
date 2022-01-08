@@ -128,7 +128,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, '/static/'),
-    os.path.join(BASE_DIR, '/bonus/static/')
+    os.path.join(BASE_DIR, '/bonus/static/'),
+    os.path.join(BASE_DIR, '/apply/static/')
 )
 
 MEDIA_URL ='/media/'                        # add by nlh
