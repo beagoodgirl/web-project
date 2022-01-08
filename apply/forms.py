@@ -17,9 +17,9 @@ class PersonModelForm(forms.ModelForm):
         }
 
         labels = {
-            'ssn': '身分證字號',
+            'ssn': '帳號',
             'tel': '電話號碼',
-            'voucher_id': '綁定'
+            'voucher_id': '領取方式'
         }
 
     # override the clean_<fieldname>() method
@@ -28,17 +28,15 @@ class PersonModelForm(forms.ModelForm):
         data = self.cleaned_data['ssn'] # 通過基本檢查乾淨資料
 
         if len(data) != 10 :
-            raise ValidationError('身分證長度必須為 10')
-
+            raise ValidationError('帳號長度必須為 10')
         # Remember to always return the cleaned data.
         return data
 
-    # 電話號碼必須大於五個字
+    # 電話號碼必須等於10個字
     def clean_tel(self):
         data = self.cleaned_data['tel']
-
-        if len(data) < 5 :
-            raise ValidationError('電話長度不可小於5')
+        if len(data) != 10 :
+            raise ValidationError('電話長度須等於10')
 
         # Remember to always return the cleaned data.
         return data        
