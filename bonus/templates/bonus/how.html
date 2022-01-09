@@ -1,8 +1,123 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 {% load static %}
-<img class="rounded mx-auto d-block" src="{% static 'images/drawPrize.jpeg' %}" width="600">
+<div class="accordion">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    收到酪梨後
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                您會收到硬的尚未熟的酪梨，建議打開紙箱通風避免悶壞，並避免日照直射。
+                <br />
+                夏天氣溫高，室溫下通常4天左右可成熟。
+                <br />
+                冬天氣溫低，通常要等候至7天左右成熟。
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    判斷成熟的方法
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                1. 以手指按壓，感覺可繼續壓入不會彈起則已成熟此時可以食用。
+                <br />
+                2. 轉色品種: 顏色轉成暗紅色
+                <br />
+                3. 種子脫落 搖晃酪梨有聲音
+                <br />
+                4. 下刀時先切一小部分，刀行無阻力，果皮果肉可以分離就熟了，萬一發現不對可以放著再等。
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    擔心酪梨會一起熟成，吃不完怎麼辦？
+                </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                剛收到未成熟的酪梨可以報紙包住放入保鮮袋冷藏，可延緩成熟，取出放室溫可再後熟，但是每部冰箱溫度條件不一，也可能壞掉，建議不超過10天。
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingFour">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    酪梨已經熟了，吃不完怎麼辦？
+                </button>
+            </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+                將酪梨去皮、去果核後，切片放入保鮮盒後，
+                <br/> 
+                (1)冷藏保存: 已成熟吃不完的，冰箱冷藏能多保存3天左右。
+                <br/>
+                (2)冷凍保存: 可延長至2個月以上。可維持味道與養分，但口感為泥狀，不適合直接食用，建議用來打酪梨牛奶或沙拉。
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingFive">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    收到壞掉的酪梨怎麼辦?
+                </button>
+            </h2>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+                因為減少農藥，難免會有果實蠅叮或挑選時無法發現的蟲蛀或黴菌侵害，我們會盡量挑選但難免會有少數情況。
+                <br/>
+                如果切開有發現內部有壞，麻煩拍照私訊粉專，我們會依情況和比例補償或退費。
+                <br/>
+                好果/壞果判別以果肉顏色為主要依據。
+                <br/>
+                壞果照片<br/>
+                <img src = "{% static 'images/bad1.jpg' %}">
+                <img src = "{% static 'images/bad2.jpg' %}">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingSix">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    酪梨果肉裡有黑褐色的絲，還可以吃嗎？
+                </button>
+            </h2>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+            <div class="card-body">
+                酪梨果肉正常會有黑褐色纖維，轉色品種尤其比較明顯。
+                <br/>
+                屬於正常品種特性，可以安心食用。
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
