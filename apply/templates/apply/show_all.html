@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>目前的訂購狀況</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>帳號</th>
+                <th>數量</th>
+                <th>電話</th>
+                <th>取貨方式</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in person_list %}
+            <tr>
+                <td>{{ p.ssn }}</td>
+                <td>{{ p.amount }}</td>
+                <td>{{ p.tel }}</td>
+                <td>{{ p.get_voucher_id_display }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
