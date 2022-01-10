@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>酪梨介紹</p>
+{% load static %}
+<img src="{% static 'images/introduction.jpg'%}">
+<p>歡迎根據季節採購</p>
+<img src="{% static 'images/2018酪梨品種分類.jpg'%}">
+<p>裝箱後的樣子！</p>
+<img src="{% static 'images/avocado.jpeg' %}" style = "width: 600px;">
+<p>常見問題</p>
+<img src="{% static 'images/faq.jpeg' %}" style = "width: 600px;">
+{% endblock %}

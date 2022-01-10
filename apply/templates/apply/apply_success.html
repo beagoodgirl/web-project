@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>綁定成功</p>
+
+<ul>
+   <li> {{form.acc.label}}: {{form.acc.value}}
+   <li> {{form.tel.label}}: {{form.tel.value}}
+   <li> {{form.take_id.label}}:
+      {% if form.take_id.value %}
+         自取
+      {% else %}
+         郵寄
+      {% endif %}
+   <li> {{form.address.label}}: {{form.address.value}}
+</ul>   
+
+{% endblock %}

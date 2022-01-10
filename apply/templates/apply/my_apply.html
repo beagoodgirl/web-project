@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>我的綁定</p>
+
+{% if person %}
+<ul>
+    <li> 帳號: {{ person.acc }}
+    <li> 數量(1/斤): {{ person.amount }}
+    <li> 電話: {{ person.tel }}
+    <li> 地址: {{ person.address }}
+    <li> 領取方式: {{ person.get_take_id_display }}
+</ul>    
+{% else %}
+<p> 尚未綁定 </p>
+{% endif %}
+
+{% endblock %}
